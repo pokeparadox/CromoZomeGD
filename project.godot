@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cromo Zome"
+run/main_scene="res://MainGame.tscn"
 config/icon="res://icon.png"
 
 [rendering]
