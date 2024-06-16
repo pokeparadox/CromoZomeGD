@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1718571694
+default_env.tres::Environment::8375057224935421964::1718572402::0::1::::<><>::
+icon.png::CompressedTexture2D::6811851761994050827::1718543546::1718543632::1::::<><>::
+MainGame.tscn::PackedScene::2988829177459956163::1718572402::0::1::::<><>::uid://bxbrqoos6md30::::res://Snake/PlayerSnake.tscn
+PlayerSnake.gd::GDScript::-1::1718543590::0::1::::<>Node2D<>::
+README.md::TextFile::-1::1718543546::0::1::::<><>::
+Title.tscn::PackedScene::-1::1718543590::0::1::::<><>::
+::res://Nodes/::1718549074
+Node.gd::GDScript::-1::1718572115::0::1::::BaseNode<>Area2D<>::
+Node.tscn::PackedScene::5157808507078108956::1718572402::0::1::::<><>::res://Nodes/Node.gd
+::res://Nodes/Blue/::1718543632
+blueamoeba.png::CompressedTexture2D::7779333033955367669::1718543546::1718543632::1::::<><>::
+::res://Snake/::1718549074
+PlayerSnake.tscn::PackedScene::4003889984515317869::1718572402::0::1::::<><>::res://PlayerSnake.gd<>uid://cpkmcmurlpbn2::::res://Snake/Snake.tscn
+Snake.gd::GDScript::-1::1718572402::0::1::::<>Node2D<>::
+Snake.tscn::PackedScene::5847050636962276129::1718544989::0::1::::<><>::uid://cfqql8sqlwfbg::::res://Nodes/Node.tscn<>res://Snake/Snake.gd

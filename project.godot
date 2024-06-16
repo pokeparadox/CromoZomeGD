@@ -6,27 +6,25 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "BaseNode",
-"language": "GDScript",
-"path": "res://Nodes/Node.gd"
-} ]
-_global_script_class_icons={
-"BaseNode": ""
-}
+config_version=5
 
 [application]
 
 config/name="Cromo Zome"
+config/tags=PackedStringArray("arcade", "game")
 run/main_scene="res://MainGame.tscn"
+config/features=PackedStringArray("4.2")
 config/icon="res://icon.png"
+
+[autoload]
+
+Constants="*res://Game/constants.gd"
+GameManager="*res://Game/game_manager.gd"
 
 [rendering]
 
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"

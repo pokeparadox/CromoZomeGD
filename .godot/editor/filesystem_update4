@@ -1,0 +1,10 @@
+res://Nodes/Node.gd
+res://default_env.tres
+res://MainGame.tscn
+res://Nodes/Node.tscn
+res://Snake/PlayerSnake.tscn
+res://Snake/Snake.gd
+res://Game/game_manager.gd
+res://MainGame.gd
+res://Game/constants.gd
+res://PlayerSnake.gd
