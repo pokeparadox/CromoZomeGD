@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bit2tyltwqq1p"]
+[gd_scene load_steps=4 format=3 uid="uid://bit2tyltwqq1p"]
 
 [ext_resource type="PackedScene" uid="uid://bxbrqoos6md30" path="res://Snake/PlayerSnake.tscn" id="1"]
 [ext_resource type="Script" path="res://MainGame.gd" id="1_2w5ju"]
+[ext_resource type="PackedScene" uid="uid://behuss8wsio6k" path="res://Nodes/Food/Food.tscn" id="3_u8oyo"]
 
 [node name="MainGame" type="Node2D"]
 script = ExtResource("1_2w5ju")
 
 [node name="PlayerSnake" parent="." instance=ExtResource("1")]
 position = Vector2(510, 323)
+
+[node name="Food" parent="." instance=ExtResource("3_u8oyo")]
+
+[connection signal="area_entered" from="Food" to="." method="_on_food_area_entered"]

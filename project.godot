@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 
 Constants="*res://Game/constants.gd"
 GameManager="*res://Game/game_manager.gd"
+Resolution="*res://Utils/Resolution.gd"
 
 [rendering]
 
