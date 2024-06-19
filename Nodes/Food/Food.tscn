@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://behuss8wsio6k"]
+[gd_scene load_steps=4 format=3 uid="uid://behuss8wsio6k"]
 
 [ext_resource type="Script" path="res://Nodes/Food/Food.gd" id="1_qu7jm"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="2_bckla"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rhxr5"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwf13"]
 
 [node name="Food" type="Area2D"]
 script = ExtResource("1_qu7jm")
 
+[node name="Ellipse" type="Node2D" parent="."]
+script = ExtResource("2_bckla")
+size = Vector2(20, 20)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_rhxr5")
+shape = SubResource("CircleShape2D_dwf13")

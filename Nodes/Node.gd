@@ -1,9 +1,13 @@
 extends Area2D
 class_name BaseNode
 
+signal grow_snake
+
 var is_root : bool = false
 var target := Vector2(0.0,0.0)
-var colour = Color(1,1,1)
+var colour = Color(1,1,1):
+	set(c):
+		$Ellipse.fill_color = c
 var speed : int = 100
 @onready var width = (get_radius()*2) + 4
 @onready var width_sq = width * width
@@ -22,15 +26,15 @@ func _process(_delta):
 	if is_root:
 		position += diff
 	elif diff.length_squared() > width_sq:
-		diff = diff.normalized() * speed * 3
+		diff = diff.normalized() * speed * 2.6
 		position += diff
 
-func _draw():
-	draw_circle(position, get_radius(), colour)
-
-
 func _on_area_entered(area: Area2D) -> void:
-	var group = get_groups().front()
-	var has_group : bool = area.get_groups().size() > 0
-	if group != null and has_group and not area.is_in_group(group):
-		queue_free()
+	var groups = get_groups()
+	if not groups.is_empty():
+		var group = get_groups().front()
+		var has_group : bool = area.get_groups().size() > 0
+		if group != null and has_group and not area.is_in_group(group):
+			queue_free()
+	elif is_root and area is Food:
+		emit_signal("grow_snake")

@@ -1,14 +1,12 @@
-extends BaseNode
+extends Area2D
+class_name Food
 
-func _ready() -> void:
+func reset() -> void:
 	var w : int = Resolution.get_width()
 	var h : int = Resolution.get_height()
 	var offset : int = int(h * 0.1)
-	position = Vector2(10, 10)#Vector2(randf_range(offset + width, w - (offset + width)), randf_range(offset + width, h - (offset + width)))
+	var node_width : int = $CollisionShape2D.shape.radius
+	position = Vector2(randf_range(offset + node_width, w - (offset + node_width)), randf_range(offset + node_width, h - (offset + node_width)))
 
-func _process(_delta: float) -> void:
-	pass
-
-
-func _draw() -> void:
-	super._draw()
+func _ready() -> void:
+	reset()

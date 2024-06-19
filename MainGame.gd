@@ -8,6 +8,6 @@ func _on_snake_added() -> void:
 	pass
 
 
+
 func _on_food_area_entered(area: Area2D) -> void:
-	$Food.visible = false
-	pass # Replace with function body.
+	$Food.reset()

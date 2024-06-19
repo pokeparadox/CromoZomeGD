@@ -7,3 +7,5 @@
 script = ExtResource("2")
 
 [node name="Head" parent="." instance=ExtResource("1")]
+
+[connection signal="grow_snake" from="Head" to="." method="_on_head_grow_snake"]
